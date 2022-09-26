@@ -16,11 +16,11 @@ pipeline {
             script{
             def scannerHome = tool 'sonarqube';
             withSonarQubeEnv('SonarQube') {
-                sh "${tool("sonarqube")}/bin/sonar-scanner \
-                    -Dsonar.projectKey=sonarqubetest \ 
-                    -Dsonar.login=admin \
-                    -Dsonar.passwd=admin \
-                    -Dsonar.host.url=http://127.0.0.1:9000 \
+                sh "${tool("sonarqube")}/bin/sonar-scanner 
+                    -Dsonar.projectKey=sonarqubetest 
+                    -Dsonar.login=admin 
+                    -Dsonar.passwd=admin 
+                    -Dsonar.host.url=http://127.0.0.1:9000 
                     -Dsonar.projectName=sonarqubetest"
             }
             }
