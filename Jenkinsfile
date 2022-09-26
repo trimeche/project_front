@@ -19,6 +19,8 @@ pipeline {
                 sh "${tool("sonarqube")}/bin/sonar-scanner \
                     -Dsonar.projectKey=sonarqubetest \
                     -Dsonar.sources=. \
+                    -Dsonar.login=admin
+                    -Dsonar.passwd=admin
                     -Dsonar.host.url=http://127.0.0.1:9000 \
                     -Dsonar.projectName=sonarqubetest"
             }
